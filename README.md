@@ -2,6 +2,8 @@
 
 A runnable desktop experiment for selecting a suggested reply, cancelling it, and deliberately confirming it. This public technical review repo is recovered from the historical Veltrah prototype and preserves the charcoal, gold and mint interface.
 
+**Review this demo:** [Watch the 22-second software demo](Veltrah_Text_Reply_Demo_2026-11-04.mp4). This repo contains the November 4, 2026 software version. The GitHub link provides the source and clip; run the app locally using the instructions below.
+
 **Start here in VS Code:** clone the repository or extract the downloaded ZIP, open `Veltrah.code-workspace`, then press **Ctrl+Shift+B** (macOS: **Cmd+Shift+B**). The default **Veltrah: Run demo** task starts the app and opens your browser. Opening the repository folder through **File → Open Folder** also loads the task. Requires Python 3.10+ on PATH; VS Code extensions are optional. See [VS Code setup and troubleshooting](docs/VSCODE.md).
 
 The production React frontend and pure-Python WebSocket dependency are included. The default demo needs no npm/pip install, account, API key, camera or model download. Terminal commands are below.
