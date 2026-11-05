@@ -1,0 +1,97 @@
+
+CHECK: Python behavior/protocol/calibration
+test_default_import_needs_no_sdk_camera_packages_or_network (test_recovery_backend.DecodeAndTrackingTests.test_default_import_needs_no_sdk_camera_packages_or_network) ... ok
+test_invalid_json_shape_and_bounded_payload (test_recovery_backend.DecodeAndTrackingTests.test_invalid_json_shape_and_bounded_payload) ... ok
+test_nonfinite_out_of_range_and_unhashable_coordinates_rejected (test_recovery_backend.DecodeAndTrackingTests.test_nonfinite_out_of_range_and_unhashable_coordinates_rejected) ... ok
+test_ack_is_local_only_and_retries_are_idempotent (test_recovery_backend.FixtureSessionTests.test_ack_is_local_only_and_retries_are_idempotent) ... ok
+test_cancel_never_creates_selection_and_repeat_is_available (test_recovery_backend.FixtureSessionTests.test_cancel_never_creates_selection_and_repeat_is_available) ... ok
+test_each_session_is_synthetic_and_options_are_bounded (test_recovery_backend.FixtureSessionTests.test_each_session_is_synthetic_and_options_are_bounded) ... ok
+test_invalid_commands_leave_current_state_intact (test_recovery_backend.FixtureSessionTests.test_invalid_commands_leave_current_state_intact) ... ok
+test_simulated_delay_creates_fresh_fixture_no_network (test_recovery_backend.FixtureSessionTests.test_simulated_delay_creates_fresh_fixture_no_network) ... ok
+test_simulated_failure_blocks_action_and_recovery_is_fresh (test_recovery_backend.FixtureSessionTests.test_simulated_failure_blocks_action_and_recovery_is_fresh) ... ok
+test_stale_and_invalid_selection_never_selects (test_recovery_backend.FixtureSessionTests.test_stale_and_invalid_selection_never_selects) ... ok
+test_head_has_asset_headers_and_no_body (test_recovery_backend.HTTPIntegrationTests.test_head_has_asset_headers_and_no_body) ... ok
+test_health_and_config_are_explicit_fixture_mode (test_recovery_backend.HTTPIntegrationTests.test_health_and_config_are_explicit_fixture_mode) ... ok
+test_no_hidden_files_directory_listing_or_missing_asset_fallback (test_recovery_backend.HTTPIntegrationTests.test_no_hidden_files_directory_listing_or_missing_asset_fallback) ... ok
+test_malformed_input_and_tracker_roles_recover_without_handler_crash (test_recovery_backend.WebSocketIntegrationTests.test_malformed_input_and_tracker_roles_recover_without_handler_crash) ... ok
+test_real_socket_selection_and_isolated_sessions (test_recovery_backend.WebSocketIntegrationTests.test_real_socket_selection_and_isolated_sessions) ... ok
+test_uninitialized_socket_receives_no_broadcast_before_role_ready (test_recovery_backend.WebSocketIntegrationTests.test_uninitialized_socket_receives_no_broadcast_before_role_ready) ... ok
+test_affine_intercept_and_independent_validation (test_recovery_calibration.CalibrationTests.test_affine_intercept_and_independent_validation) ... ok
+test_camera_connection_disables_environment_proxy_without_camera_or_network (test_recovery_calibration.CalibrationTests.test_camera_connection_disables_environment_proxy_without_camera_or_network) ... ok
+test_cli_checks_do_not_open_camera_or_require_model (test_recovery_calibration.CalibrationTests.test_cli_checks_do_not_open_camera_or_require_model) ... ok
+test_each_target_requires_presentation_confirmation_and_multiple_frames (test_recovery_calibration.CalibrationTests.test_each_target_requires_presentation_confirmation_and_multiple_frames) ... ok
+test_feature_extraction_rejects_lost_closed_eyes_and_invalid_landmarks (test_recovery_calibration.CalibrationTests.test_feature_extraction_rejects_lost_closed_eyes_and_invalid_landmarks) ... ok
+test_inadequate_coverage_invalid_numbers_and_dimensions (test_recovery_calibration.CalibrationTests.test_inadequate_coverage_invalid_numbers_and_dimensions) ... ok
+test_mediapipe_timestamps_are_strictly_increasing (test_recovery_calibration.CalibrationTests.test_mediapipe_timestamps_are_strictly_increasing) ... ok
+test_rank_deficient_and_nonvarying_features_rejected (test_recovery_calibration.CalibrationTests.test_rank_deficient_and_nonvarying_features_rejected) ... ok
+test_replay_transport_declares_synthetic_and_ends_with_loss (test_recovery_calibration.CalibrationTests.test_replay_transport_declares_synthetic_and_ends_with_loss) ... ok
+test_replay_validation_finishes_with_loss_and_rejects_bad_data (test_recovery_calibration.CalibrationTests.test_replay_validation_finishes_with_loss_and_rejects_bad_data) ... ok
+test_retry_drops_partial_target_and_loss_does_not_advance (test_recovery_calibration.CalibrationTests.test_retry_drops_partial_target_and_loss_does_not_advance) ... ok
+test_smoothing_duplicate_reversed_time_loss_and_long_gap (test_recovery_calibration.CalibrationTests.test_smoothing_duplicate_reversed_time_loss_and_long_gap) ... ok
+test_validation_preserves_out_of_screen_error_and_requires_distinct_targets (test_recovery_calibration.CalibrationTests.test_validation_preserves_out_of_screen_error_and_requires_distinct_targets) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 1.476s
+
+OK
+
+CHECK: Frontend interaction/transport
+✔ stationary dwell completes from clock ticks without additional mouse movement (3.11657ms)
+✔ moving to another target starts its own dwell, with no carryover (0.199275ms)
+✔ a real exit cancels a partial dwell and reentry starts from zero (0.232479ms)
+✔ cancel blocks repeat activation until an actual exit/reentry (0.151482ms)
+✔ invalid/lost gaze resets partial dwell and never completes from stale samples (0.205964ms)
+✔ future or missing camera timestamps cannot complete dwell (0.159149ms)
+✔ session or mode change discards accumulated dwell (0.156614ms)
+✔ a non-finite clock cannot select (0.123945ms)
+✔ invalid sessions including null options fail safely (0.926177ms)
+✔ a selection needs both a connection and a valid current session (0.657429ms)
+✔ draft selection cannot commit automatically; only explicit commit produces one request (0.545976ms)
+✔ cancelled draft cannot be confirmed (0.205317ms)
+✔ ACK must match every current request field and can be accepted only once (0.308605ms)
+✔ disconnect discards the draft and pending request; reconnect never resends it (0.120097ms)
+✔ new session or input-context invalidation discards pending ACK (0.091559ms)
+✔ regressing or duplicate session sequence is rejected (0.378149ms)
+✔ metrics export excludes message bodies, raw gaze and unapproved fields (0.995967ms)
+✔ standalone fixture is explicitly browser-only and opens with shared synthetic scenario (3.714645ms)
+✔ browser fixture gives exactly idempotent acknowledgement for the same request (1.682615ms)
+✔ same request ID cannot select a different option (0.280113ms)
+✔ a second request cannot commit a second choice within one trial (0.304119ms)
+✔ new scenario invalidates old selection requests and old ACK cache (0.308737ms)
+✔ generation failure invalidates choices; recovery creates a new sequence (0.391878ms)
+✔ invalid scenario and request shapes are rejected without throwing (0.307686ms)
+✔ reset cancels a simulated delayed generation so it cannot replace the new trial (0.584056ms)
+✔ closed browser fixture cannot emit or perform delayed actions (0.316895ms)
+✔ socket transport never queues requests while disconnected or resends after reconnect (0.830031ms)
+✔ old socket messages are ignored after a fresh connection replaces it (0.312577ms)
+✔ default browser timers keep the global receiver for delay, cleanup and reconnect (0.480277ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 164.68765
+
+CHECK: Production frontend build
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> veltrah-recovery-frontend@0.2.0-recovery build
+> vite build
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 18 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.84 kB │ gzip:  0.52 kB
+dist/assets/index-oLiSvBGh.css   16.06 kB │ gzip:  3.94 kB
+dist/assets/index-Bxsc5bNP.js   253.12 kB │ gzip: 78.64 kB
+
+✓ built in 223ms
+
+CHECK: Actual launcher smoke
+PASS: separate-process launcher, HTTP/config, WebSocket selection, duplicate and stale-session checks.
+
+All developer checks passed. Camera hardware and real user benefit remain unverified.

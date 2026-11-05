@@ -1,0 +1,50 @@
+{
+  "verified_at_utc": "2026-11-04T22:54:00.900236+00:00",
+  "environment": {
+    "os": "Linux",
+    "python": "3.12.14",
+    "node": "v24.22.1",
+    "chromium": "153.0.8010.0",
+    "playwright": "1.62.1"
+  },
+  "results": {
+    "python_unittests": {
+      "passed": 29,
+      "command": "python3 -S -m unittest discover -s backend/tests -v"
+    },
+    "frontend_unittests": {
+      "passed": 29,
+      "command": "npm --prefix frontend test"
+    },
+    "production_build": {
+      "status": "passed"
+    },
+    "fresh_process_http_websocket_smoke": {
+      "status": "passed",
+      "command": "python3 -S tools/smoke_demo.py"
+    },
+    "browser_checks": {
+      "passed": 19,
+      "details": "browser-results.json",
+      "command": "node tools/verify_browser.cjs (with local browser adapter and offline preview enabled)"
+    }
+  },
+  "browser_environment_note": "Standard Playwright browser CDN download returned an invalid archive in this environment. Checks ran with a locally extracted @sparticuz/chromium browser through the test runner adapter. This temporary browser/runtime is not included in the repo. Normal developer/CI instructions use the official Playwright install route.",
+  "limits": [
+    "Linux execution only; supplied Windows/macOS launchers and future CI matrix are not verified platform results.",
+    "Camera-source browser checks use protocol stubs. No physical camera, model inference, real gaze accuracy or glasses tested.",
+    "No live model, external message delivery or customer benefit established.",
+    "No hosted CI run, external repository push or source sharing performed."
+  ],
+  "evidence_files": [
+    "checks.txt",
+    "browser-results.json"
+  ],
+  "vscode_update": {
+    "configuration_and_fresh_task_launch": "passed",
+    "details": "vscode-verification.json",
+    "current_developer_checks": "vscode-checks.txt",
+    "native_editor_gui": "unavailable",
+    "windows_macos_native_execution": "unverified"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "checked_at": "2026-11-04T22:53:26.715Z",
+  "scope": "Automated local software checks only. Camera-source checks use protocol stubs, not real camera data.",
+  "results": [
+    {
+      "name": "Live Python/WebSocket fixture labels and four options",
+      "status": "passed",
+      "duration_ms": 13
+    },
+    {
+      "name": "Stationary mouse dwell selects once without committing",
+      "status": "passed",
+      "duration_ms": 2054
+    },
+    {
+      "name": "Escape cancels and stationary hover does not select again",
+      "status": "passed",
+      "duration_ms": 920
+    },
+    {
+      "name": "Looking away before dwell completes cancels progress",
+      "status": "passed",
+      "duration_ms": 1054
+    },
+    {
+      "name": "Keyboard selection requires separate explicit confirmation",
+      "status": "passed",
+      "duration_ms": 135
+    },
+    {
+      "name": "Scenario changes invalidate an existing draft",
+      "status": "passed",
+      "duration_ms": 104
+    },
+    {
+      "name": "Simulated generator failure and recovery do not commit",
+      "status": "passed",
+      "duration_ms": 226
+    },
+    {
+      "name": "Simulated response delay clears actions then restores a fresh trial",
+      "status": "passed",
+      "duration_ms": 2572
+    },
+    {
+      "name": "Clearly labeled internal synthetic gaze selects a draft only",
+      "status": "passed",
+      "duration_ms": 895
+    },
+    {
+      "name": "External synthetic coordinate replay reaches UI and lost input cancels",
+      "status": "passed",
+      "duration_ms": 1059
+    },
+    {
+      "name": "Synthetic samples expire when the producer stops updating",
+      "status": "passed",
+      "duration_ms": 1392
+    },
+    {
+      "name": "Camera source gate and stale/lost cancellation using protocol stubs only",
+      "status": "passed",
+      "duration_ms": 1622
+    },
+    {
+      "name": "Input mode and window blur clear draft selections",
+      "status": "passed",
+      "duration_ms": 119
+    },
+    {
+      "name": "Disconnect clears drafts; reconnect starts fresh without resend",
+      "status": "passed",
+      "duration_ms": 585
+    },
+    {
+      "name": "Metrics export excludes message text and raw gaze coordinates",
+      "status": "passed",
+      "duration_ms": 52
+    },
+    {
+      "name": "Independent browser tabs keep local selections separate",
+      "status": "passed",
+      "duration_ms": 310
+    },
+    {
+      "name": "Narrow viewport has no horizontal overflow and retains controls",
+      "status": "passed",
+      "duration_ms": 145
+    },
+    {
+      "name": "Single-file preview opens offline with browser-only fixtures",
+      "status": "passed",
+      "duration_ms": 515
+    },
+    {
+      "name": "No page exceptions or external HTTP requests",
+      "status": "passed",
+      "duration_ms": 2
+    }
+  ],
+  "page_errors": [],
+  "external_http_requests": []
+}
