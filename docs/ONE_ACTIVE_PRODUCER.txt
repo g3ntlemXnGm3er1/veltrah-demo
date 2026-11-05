@@ -1,0 +1,1 @@
+Use one active external coordinate producer at a time. Stop and close it, reset the trial, then switch input/producer. An unknown-source disconnect conservatively cancels pending gaze and requires a deliberate fresh trial or target exit/re-entry. Synthetic replay is not eye tracking.
