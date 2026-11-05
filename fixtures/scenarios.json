@@ -1,0 +1,29 @@
+{
+  "planning": {
+    "incoming": {"id": "planning-fixture", "from": "Alex · synthetic contact", "text": "Can we meet at 3:30? I can send the agenda first."},
+    "options": [
+      {"id": "reply-1", "text": "3:30 works. Please send the agenda."},
+      {"id": "reply-2", "text": "Could we make it 4:00 instead?"},
+      {"id": "reply-3", "text": "I’ll confirm the time shortly."},
+      {"id": "reply-4", "text": "Thanks — let’s discuss tomorrow."}
+    ]
+  },
+  "logistics": {
+    "incoming": {"id": "logistics-fixture", "from": "Dispatch · synthetic contact", "text": "The delivery is at the loading area. Which location should we use?"},
+    "options": [
+      {"id": "reply-1", "text": "Please wait at the loading area."},
+      {"id": "reply-2", "text": "Use the main entrance, please."},
+      {"id": "reply-3", "text": "I’ll check and reply shortly."},
+      {"id": "reply-4", "text": "Please send the location again."}
+    ]
+  },
+  "social": {
+    "incoming": {"id": "social-fixture", "from": "Jamie · synthetic contact", "text": "Want to get coffee this weekend? Saturday afternoon is open."},
+    "options": [
+      {"id": "reply-1", "text": "Saturday afternoon sounds good."},
+      {"id": "reply-2", "text": "Could we try Sunday instead?"},
+      {"id": "reply-3", "text": "Let me check my plans first."},
+      {"id": "reply-4", "text": "Thanks — another weekend would work better."}
+    ]
+  }
+}
