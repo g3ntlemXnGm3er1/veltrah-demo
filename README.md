@@ -2,7 +2,7 @@
 
 A runnable desktop experiment for selecting a suggested reply, cancelling it, and deliberately confirming it. This public technical review repo is recovered from the historical Veltrah prototype and preserves the charcoal, gold and mint interface.
 
-**Review this demo:** [Watch the 22-second software demo](Veltrah_Text_Reply_Demo_2026-11-04.mp4). This repo contains the November 4, 2026 software version. The GitHub link provides the source and clip; run the app locally using the instructions below.
+**Review this demo:** [Download the 22-second software demo](https://github.com/g3ntlemXnGm3er1/veltrah-demo/raw/refs/heads/main/Veltrah_Text_Reply_Demo_2026-11-04.mp4). This repo contains the November 4, 2026 software version. The GitHub link provides the source and clip; run the app locally using the instructions below.
 
 **Start here in VS Code:** clone the repository or extract the downloaded ZIP, open `Veltrah.code-workspace`, then press **Ctrl+Shift+B** (macOS: **Cmd+Shift+B**). The default **Veltrah: Run demo** task starts the app and opens your browser. Opening the repository folder through **File → Open Folder** also loads the task. Requires Python 3.10+ on PATH; VS Code extensions are optional. See [VS Code setup and troubleshooting](docs/VSCODE.md).
 
@@ -75,6 +75,8 @@ After frontend changes, run `npm --prefix frontend run build` and `python3 tools
 On this repository's GitHub page, select **Code → Download ZIP**, extract the archive, then open `Veltrah.code-workspace` in the extracted folder. If you use Git, copy the repository URL from the **Code** menu and clone it with your Git client.
 
 The separately distributed original review ZIP includes `veltrah-review.bundle` for restoring the offline recovery-review history. That bundle is not part of the GitHub source tree or GitHub's generated ZIP download. The recovery-review history is distinct from the original historical prototype commits.
+
+`SHA256SUMS` records committed bytes. GitHub ZIPs and Git checkouts may use CRLF for `Start_Veltrah_Demo.cmd` and `tools/launch_demo.cmd`; compare those files after normalizing to LF. Launch commands are unchanged.
 
 ## Code map
 
