@@ -1,0 +1,37 @@
+FIRST USER/TASK TEST - PROPOSED, NOT CONDUCTED
+
+Hypothesis: a deliberate gaze/dwell selection may help a frequent hands-busy task
+where an existing phone/mouse/keyboard/voice method is awkward. The first user,
+buyer and task are not yet validated. The synthetic message flow is a convenient
+software experiment, not proof that messaging is the right market.
+
+BEFORE SHOWING A SOLUTION
+Ask the person to describe the last real occurrence, frequency, current workaround,
+what errors cost, who chooses/pays for tools, and why existing options fall short.
+Record concrete examples and refusals as carefully as positive comments.
+
+FORMATIVE COMPARISON
+1. Choose one harmless repeatable task with synthetic data, a credible baseline
+   and success/error definitions agreed before looking at the result.
+2. Begin with desktop mouse/keyboard and the declared synthetic-replay mode only
+   as software checks. A real gaze comparison needs physical camera calibration
+   and independent targets first. Do not treat replay as participant eye data.
+3. Counterbalance task/condition order where practical. Keep data and task equal.
+4. Capture completion, elapsed task time, unintended highlights/selections,
+   cancellations, retries, calibration time, perceived effort and desire to return.
+5. Test loss/reconnect, look-away and deliberate confirmation in a harmless context.
+6. Use coded participant IDs and appropriate permission. Avoid employer/customer
+   messages, identifiers or patient records. No recruitment is authorized here.
+
+INTERPRETATION
+An exploratory small sample helps identify failure modes; it does not establish
+population efficacy, market size or clinical benefit. A cofounder's enthusiasm
+also does not establish customer demand. Decide continue/narrow/pause based on
+observed advantage, acceptable errors and willingness to repeat the task.
+
+NEXT JOINT COFOUNDER MILESTONE
+Inspect this recovery baseline, reproduce it on a second real machine, choose a
+task/user hypothesis together and validate actual input hardware. The initial
+missing-launch-file recovery is already supplied; avoid restarting that work
+without a concrete reason. Agree scope/compensation/rights/access before company
+building work. Do not offer an open-ended unpaid production assignment.

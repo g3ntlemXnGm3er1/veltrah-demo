@@ -1,0 +1,139 @@
+VELTRAH RECOVERY - INPUT, CALIBRATION AND HARDWARE VALIDATION
+Prepared November 4, 2026. Local experiment; actual webcam gaze accuracy UNVERIFIED.
+
+WHAT IS VERIFIED OFFLINE
+- Dependency-free affine calibration with intercept, standardized features,
+  regularization and rank/coverage/finite-value checks.
+- Explicit target presentation, settling, deliberate capture and multiple frames;
+  a missing face never advances the target or supplies a center-screen fallback.
+- Separate held-out targets and un-clipped normalized error calculations.
+- Duplicate/reversed timestamp handling, smoothing reset after tracking loss,
+  bounded coordinates and distant-extrapolation rejection.
+- Synthetic replay is always labeled source=synthetic and ends with invalid input.
+- The camera adapter dependency check does not open or test a camera.
+
+WHAT IS NOT VERIFIED
+No physical camera, real MediaPipe inference, display calibration, head-motion
+robustness, glasses input, actual gaze accuracy, user benefit or outdoor behavior
+was tested here. Optional native dependency/model compatibility is distinct from
+the default fixture demo. Do not call synthetic coordinate replay eye tracking.
+
+QUICK SYNTHETIC REPLAY
+From the project root, while the demo server is running:
+
+  python tools/replay_coordinates.py --dry-run
+  python tools/replay_coordinates.py --x 0.5 --y 0.5 --hold-ms 1500
+
+The script connects only to loopback ws://127.0.0.1:8000 (override --url for a
+different local port), registers a tracker connection and sends finite normalized
+samples. The built-in trace is a stationary synthetic point, followed by a lost
+frame; it is for software dwell/cancellation checks. It does not target a
+particular reply automatically. Select the synthetic input mode in the UI and
+use known target bounds if deliberately testing one.
+
+A local JSON trace can be supplied via --trace path.json. Format:
+[
+  {"time_ms": 0, "x": 0.4, "y": 0.4, "valid": true},
+  {"time_ms": 800, "x": 0.4, "y": 0.4, "valid": true},
+  {"time_ms": 850, "valid": false}
+]
+
+Times must be sorted and finite, 0-120000 ms; values must be normalized [0,1].
+Use sufficiently frequent samples (for example 30 Hz) when testing the UI's stale
+input timeout. Sparse samples in the format example intentionally become stale;
+they should not complete dwell. Final tracking loss is appended if absent.
+No data is sent off-machine. Traces may contain sensitive gaze information if
+you supply real data yourself; this tool does not record or upload camera frames.
+
+OPTIONAL EXPERIMENTAL CAMERA PATH
+1. Check what is available without opening a camera:
+
+     python backend/recovery_gaze.py --check
+
+2. Create a separate Python 3.12 environment, then explicitly install the
+   optional pinned requirements-camera.txt. This is an installation step with
+   network/package dependencies, not something the default demo does for you.
+   Windows example:
+
+     py -3.12 -m venv .venv-camera
+     .venv-camera\Scripts\python -m pip install -r requirements-camera.txt
+
+   macOS/Linux example, using an available Python 3.12:
+
+     python3.12 -m venv .venv-camera
+     .venv-camera/bin/python -m pip install -r requirements-camera.txt
+
+   MediaPipe uses the contrib OpenCV package. Do not install multiple OpenCV
+   wheel variants into the same environment. These optional dependencies and a
+   local graphical desktop must work on your machine; setup was not proved with
+   a physical camera here.
+
+3. Obtain a compatible face_landmarker.task model from the official Google
+   Face Landmarker model documentation below. Place it locally and pass --model.
+   No model is bundled or automatically downloaded. Check the model's applicable
+   terms and platform compatibility before use.
+
+4. Start the default local demo in one terminal. In a second terminal, using
+   your optional environment's Python:
+
+     Windows: .venv-camera\Scripts\python backend/recovery_gaze.py --model C:\path\face_landmarker.task
+     macOS/Linux: .venv-camera/bin/python backend/recovery_gaze.py --model /absolute/path/face_landmarker.task
+
+   This explicitly opens the selected camera (--camera 0 by default). It uses
+   MediaPipe Tasks VIDEO mode and strictly increasing frame timestamps, not the
+   legacy mp.solutions API. Frames are processed locally and not stored.
+
+5. The separate full-screen OpenCV window displays nine training targets.
+   Look at each target, wait for it to settle, and press SPACE to begin a
+   multi-frame capture. Twenty-five usable frames over at least 0.6 seconds are
+   required per target. Tracking loss clears partial samples; look back and
+   press SPACE again. ESC aborts. Each target times out after 90 seconds.
+
+6. Four DIFFERENT validation targets follow. Their errors are measured against
+   the fitted mapping without refitting. The configurable default normalized
+   RMSE gate is 0.12; maximum error must also be <= 0.24. This permissive software
+   rejection gate is not a proven acceptable gaze-control threshold. Reported
+   distances are in normalized x/y screen coordinates, not visual-angle degrees.
+   A passed gate does not establish that the UI's button sizes are usable.
+
+7. After the window closes, focus the browser in full-screen mode on the SAME
+   display. Tracking starts after three seconds and lasts 60 seconds by default.
+   Choose experimental camera input only when valid camera samples arrive.
+   Ctrl+C stops the adapter. --duration 0 continues until manually stopped.
+   Recalibrate after camera/display/window/DPI or seating changes. Screen-space
+   to browser-viewport alignment has NOT been physically verified here.
+
+IMPORTANT LIMITS OF THIS IMPLEMENTATION
+The iris-ratio feature is a heuristic derived from the recovered approach. It
+averages within-eye horizontal/vertical iris positions and rejects tiny/closed
+eyes. The affine model has no validated 3-D/head-pose compensation. Changed head
+position, lighting, glasses, camera position or fatigue may break the mapping.
+The adapter sends invalid samples on lost eyes or distant extrapolation; it does
+not substitute a stationary center coordinate. The frontend must cancel pending
+selection on stale/lost input, input mode changes, blur and disconnection.
+
+PHYSICAL TEST LOG TO COMPLETE
+- Device/camera, OS, Python/packages, monitor/resolution, browser/zoom/DPI,
+  distance/lighting, input mode and calibration procedure.
+- Independent targets: accuracy (distance), precision/jitter, worst errors,
+  drift over time, head motion and tracking-loss/reacquisition behavior.
+- Same synthetic reply task and data with mouse/keyboard baseline and camera;
+  completion, time, wrong highlights, wrong selections, cancellations, retries,
+  calibration time, software latency and perceived effort.
+- Connection/model failure and intentional look-away: verify cancellation and
+  no automatic reply commitment. Consequential actions should retain deliberate
+  confirmation. This recovery demo never sends a real message.
+- Record failures and rejected calibrations. Small formative sessions are for
+  learning; they do not support clinical efficacy or population claims.
+
+PRIMARY TECHNICAL REFERENCES (checked November 4, 2026)
+Google MediaPipe Face Landmarker Python guide:
+https://developers.google.com/edge/mediapipe/solutions/vision/face_landmarker/python
+Google task/model overview:
+https://developers.google.com/edge/mediapipe/solutions/vision/face_landmarker
+Google FaceLandmarker API/source (strictly increasing VIDEO timestamps):
+https://github.com/google-ai-edge/mediapipe/blob/master/mediapipe/tasks/python/vision/face_landmarker.py
+Official package metadata:
+https://pypi.org/project/mediapipe/
+https://pypi.org/project/opencv-contrib-python/
+https://pypi.org/project/numpy/
