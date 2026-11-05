@@ -1,0 +1,11 @@
+{
+  "package": "websockets",
+  "version": "16.0",
+  "source": "https://pypi.org/project/websockets/16.0/",
+  "license": "BSD-3-Clause (see included upstream license)",
+  "copied_from": "Installed Codex primary runtime Python distribution",
+  "scope": "Pure Python files only; optional compiled speedups omitted",
+  "dependencies": [],
+  "python_requires": ">=3.10",
+  "vendored_python_files": 49
+}
