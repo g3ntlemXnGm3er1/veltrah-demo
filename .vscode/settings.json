@@ -1,0 +1,8 @@
+{
+  "python.analysis.extraPaths": ["./vendor", "./backend", "."],
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestArgs": ["-v", "-s", "backend/tests", "-p", "test_*.py"],
+  "files.exclude": { "**/__pycache__": true },
+  "search.exclude": { "**/node_modules": true, "**/__pycache__": true, "vendor/**": true }
+}
