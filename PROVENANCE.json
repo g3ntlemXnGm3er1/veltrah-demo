@@ -1,0 +1,502 @@
+{
+  "package": "veltrah-review",
+  "prepared_for": "Private technical cofounder evaluation",
+  "source_archive": {
+    "name": "Veltrah_Technical_Cofounder_Handoff_2026-11-03.zip",
+    "sha256": "e72a45dd3655aaf9823ac4ac5d89ebb30d5d9ed68963d67b2467e1bb254de138",
+    "selected_subdirectory": "Veltrah_Relaunch_Packet/recovery_app"
+  },
+  "baseline": "Recovered narrow React/Python fixture app; historical newmsg2-derived recovery. Not a reconstruction of original git history.",
+  "curation": [
+    "One active React entry and four active Python runtime modules; old branches, monolith and inactive scaffold excluded.",
+    "Private recruiting, personal founder records, credentials, environment state, caches and installed dependencies excluded.",
+    "Bundled production build and pure-Python websockets retained with notices.",
+    "Inherited evidence/provenance replaced by current checks and this focused record."
+  ],
+  "functional_changes": [
+    "Reject huge integer coordinates before finite-number conversion; keep malformed packets from disconnecting tracker.",
+    "Replace obsolete legacy module import test with current no-network/no-optional-dependency import regression.",
+    "Replace stale PowerShell launcher with current single-process demo launcher.",
+    "Add cross-platform developer check command and actual launcher smoke check."
+  ],
+  "rights": "Original application ownership and assignments unresolved. No new application-wide license granted. Third-party notices retained.",
+  "unchanged_source_files": [
+    {
+      "path": "Start_Veltrah_Demo.command",
+      "sha256": "f42b8b23bf176f5983e3b29157157814dc596685fce14d3572118e825f9058b5"
+    },
+    {
+      "path": "backend/recovery_calibration.py",
+      "sha256": "2ec5d18d7dc72c55b84a271c76f434f351a7e00315cefa1284d76de43e8390db"
+    },
+    {
+      "path": "backend/recovery_gaze.py",
+      "sha256": "32e456759eea0ca3e6995d1dd04c1018d55748d1a7fc689a998dfd8130c61f11"
+    },
+    {
+      "path": "backend/recovery_server.py",
+      "sha256": "c18e6c007424320e601e2e57527ab089fa0d7808432d6e423ef69990c045b98e"
+    },
+    {
+      "path": "backend/tests/test_recovery_calibration.py",
+      "sha256": "46b3d127d8a11d04a828b527f37eea4aec4b93c1047d1c48742b4ed8abdaf6b1"
+    },
+    {
+      "path": "docs/FIRST_USER_TEST_PLAN.txt",
+      "sha256": "a65741e0598e3bd297141a08a51b689906b0991844fe6cf35a9a6f0e2a7b45d8"
+    },
+    {
+      "path": "docs/ONE_ACTIVE_PRODUCER.txt",
+      "sha256": "2f4efaf3c9c8cb52c99150015dbce987a538e78cfa1ed488518fd1309110b654"
+    },
+    {
+      "path": "fixtures/scenarios.json",
+      "sha256": "d9f0bb36362c95d88463d6519f079ce785836e63d02963680d72dbd628e66b4e"
+    },
+    {
+      "path": "frontend/THIRD_PARTY_LICENSES_FRONTEND.txt",
+      "sha256": "b2128338fd41bfcc3e07ca39c3c1b0fc4e4c05f16e3e477bd5b563dc60ec2964"
+    },
+    {
+      "path": "frontend/dist/assets/index-Bxsc5bNP.js",
+      "sha256": "7b27eb4e98315c61c4d331a9a5395f21b6cd5eca5d431c7d5c7d5b17d43e9c79"
+    },
+    {
+      "path": "frontend/dist/assets/index-oLiSvBGh.css",
+      "sha256": "a1ff282458276880cf89b0ed753f2d2e19f62ceb516d151ecb9d42f6342f6ef2"
+    },
+    {
+      "path": "frontend/dist/index.html",
+      "sha256": "ca09991371710083e3d8df2e37ea6a3c532c9f83193ebf8686f70dfc1080d94d"
+    },
+    {
+      "path": "frontend/index.html",
+      "sha256": "00a91e18b3416b442221ecdefa7274d67ac7036491bece6a234ee5a813c43d62"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "0dbbf9f1c8b06911c1c49f268371edf169cd41d6659a96d86d9d6020ec7f72aa"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "1f7d45a0f043d09cb3d7285157a2af7761b62a4452fe96b6ac9770b8cfae2e5d"
+    },
+    {
+      "path": "frontend/src/recovery/interaction.js",
+      "sha256": "444da0bb1f8e92b321b44c9c4d636b2599c3b3d28cf345a8b9239d129734ffb8"
+    },
+    {
+      "path": "frontend/src/recovery/main.jsx",
+      "sha256": "6324c05d9339653c5c908ea42351d47656a6ff10daf0442eaa97b2def18ff431"
+    },
+    {
+      "path": "frontend/src/recovery/original-theme.css",
+      "sha256": "2ee0a6b06392478d122fac82bfacb482971af594a9c07c3ca469c950891660a9"
+    },
+    {
+      "path": "frontend/src/recovery/recovery.css",
+      "sha256": "ba73457db4a0f09dc030b4b7313ed697530dec9546cfc8130ad88e59a4900b8b"
+    },
+    {
+      "path": "frontend/src/recovery/transport.js",
+      "sha256": "8937792717af8409e32f1232b08f9e655bc1d1f2579c97d6c4b33814f6b2d8bf"
+    },
+    {
+      "path": "frontend/tests/interaction.test.js",
+      "sha256": "d806f5e2ac7b0f3b43cb7b9af0d0e9745b493a029832e28a63cd1a9b762c238f"
+    },
+    {
+      "path": "frontend/tests/transport.test.js",
+      "sha256": "40c12198569af5e69201135f1dcf27548047920c0f664af785de88c2e8250d0c"
+    },
+    {
+      "path": "frontend/vite.config.js",
+      "sha256": "453a360e32e4ba16e255b15506fec301b12e9967c161963ad966e0484bcb01ac"
+    },
+    {
+      "path": "qa/package.json",
+      "sha256": "409fcdde082d71887c5f01428c139542ed095edb78cb87fa587dc9dd9cec4f65"
+    },
+    {
+      "path": "requirements-camera.txt",
+      "sha256": "69996d5deb684e5e1ba536a67ef3b7214b79bac191a15d087ed183da5f16882e"
+    },
+    {
+      "path": "requirements-demo.txt",
+      "sha256": "d39676f1f24254d8c12e769592db24f2016b84a0de8ba7f2c843d20c6d3bcd43"
+    },
+    {
+      "path": "run_demo.py",
+      "sha256": "1d385c1296696012df9004c5e7e920ff853cc75611d8ab3ae47f6de8a8ae1128"
+    },
+    {
+      "path": "tools/build_offline_preview.py",
+      "sha256": "cace3de7f003086e35bf1689f563e7d93d9a06288e0e24f2bae579e73ee7cb34"
+    },
+    {
+      "path": "tools/replay_coordinates.py",
+      "sha256": "7b93c774b4616a0f3c5cc9bf74bb898559bf103c7f29f2813219df242d624cff"
+    },
+    {
+      "path": "tools/verify_browser.cjs",
+      "sha256": "616871166f884f53241efc3a9609479004920dace7801a9d1a2c0a7806bbf365"
+    },
+    {
+      "path": "vendor/WEBSOCKETS_LICENSE.txt",
+      "sha256": "3d6a0c050d8bec52fabad502e45fb25bd02bcadbd70dea34d447b6a0ff4e6da8"
+    },
+    {
+      "path": "vendor/WEBSOCKETS_PROVENANCE.json",
+      "sha256": "e90d70d931e591b171198253b930bd85658f145d77191a28870f172ab50fa9e2"
+    },
+    {
+      "path": "vendor/websockets/__init__.py",
+      "sha256": "002d87abddae49cfd63a8f7fc6f213a46b2127b0f2d0c7799b6ff2c2c752b7f6"
+    },
+    {
+      "path": "vendor/websockets/__main__.py",
+      "sha256": "c2ee4ddb093c9af060cafaf68219907f8a6b7b301ed3f8bea75db7555adec987"
+    },
+    {
+      "path": "vendor/websockets/asyncio/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/websockets/asyncio/async_timeout.py",
+      "sha256": "37ee8cb9bca26a887ae8f0171af0b3860c4233eed5d978919c7df65e2e89e931"
+    },
+    {
+      "path": "vendor/websockets/asyncio/client.py",
+      "sha256": "7b8c6582dcdbdefdbd336bcdf940e2ca852d4e183ef9de46a8a83796dda90dd1"
+    },
+    {
+      "path": "vendor/websockets/asyncio/compatibility.py",
+      "sha256": "8247a70c387335b9bafe25d5e4476f6efa7ab8765876b4ef18d8edf0ffc9b724"
+    },
+    {
+      "path": "vendor/websockets/asyncio/connection.py",
+      "sha256": "f3b45d5544628c993c57e4a158059f4c4ca15b96756145ca57c7b3533c6de4bd"
+    },
+    {
+      "path": "vendor/websockets/asyncio/messages.py",
+      "sha256": "bb633958a63dc4fcb0f06de72a85df74ee4ae3586b4e77f831d8b3547ce074ce"
+    },
+    {
+      "path": "vendor/websockets/asyncio/router.py",
+      "sha256": "4beebdbecccaf92a9409c65b5d73ce9eec7e787d9f4c7602d89361eed3ad9a60"
+    },
+    {
+      "path": "vendor/websockets/asyncio/server.py",
+      "sha256": "c10f6805cd1604e2336d7283609f148574537a85eb49f2eee82582ad497ebdc9"
+    },
+    {
+      "path": "vendor/websockets/auth.py",
+      "sha256": "53f2709a7e7d65143a11e7293af322cd0086fd96c0be051fd6293b85a6510b77"
+    },
+    {
+      "path": "vendor/websockets/cli.py",
+      "sha256": "6277a01f9f73f77271495206897896851de4b6023a935fe97ff0512da9f12ab4"
+    },
+    {
+      "path": "vendor/websockets/client.py",
+      "sha256": "7e58c8e64e6843e49f9b9dcc0a8c9396bda316d38e22e3b5dc7f5b6eda413deb"
+    },
+    {
+      "path": "vendor/websockets/connection.py",
+      "sha256": "38b88c56435ddb9ffceac07c43b0ab0b00685f2f6703438281d80b440f16511f"
+    },
+    {
+      "path": "vendor/websockets/datastructures.py",
+      "sha256": "52ad82a639976a4f7fa4f59c3aa877eabcc9328f1e0a2da554f4c5583bcae6c0"
+    },
+    {
+      "path": "vendor/websockets/exceptions.py",
+      "sha256": "6e068c76a406199a2c00450b782077d175b6627c289966b773c60eac47de3a86"
+    },
+    {
+      "path": "vendor/websockets/extensions/__init__.py",
+      "sha256": "42466cc5a255965552a75ba1743e6e3c689b75bc7fd3dd46ad555f4b92d7729c"
+    },
+    {
+      "path": "vendor/websockets/extensions/base.py",
+      "sha256": "24d7f2939e370bb56e3c7d103a86e2a8aa06af38c920b8deeaccf920bbce3e5e"
+    },
+    {
+      "path": "vendor/websockets/extensions/permessage_deflate.py",
+      "sha256": "024ba1900285a3996a2503179dc91b4acf5bd8a041ace16c1350c721c6cb2f79"
+    },
+    {
+      "path": "vendor/websockets/frames.py",
+      "sha256": "e482b8199a65f2e92bd1b67f500fe38e3ced2b4f72610025f66e4d56618b88ad"
+    },
+    {
+      "path": "vendor/websockets/headers.py",
+      "sha256": "c909cf963559c15d7f57ea4e49128d2c6feef36ef0142d61ef671c8a88dc43c3"
+    },
+    {
+      "path": "vendor/websockets/http.py",
+      "sha256": "4f5b4d2e66e41429de5d0eaa7a9066b155435f23fd8b9d34215cd3253781311e"
+    },
+    {
+      "path": "vendor/websockets/http11.py",
+      "sha256": "4fc6a2e417011a45749fd22deb7a0378da66b5033283c0a96afe6b7ffc93d2be"
+    },
+    {
+      "path": "vendor/websockets/imports.py",
+      "sha256": "4ff07d4d4987a1c78a310f8f36985d410007d97771031c1240d790120a882e41"
+    },
+    {
+      "path": "vendor/websockets/legacy/__init__.py",
+      "sha256": "c10e7344810d1944bfe5e28d017f42444ef1d53c0a6a92a29ab40515637d4b1b"
+    },
+    {
+      "path": "vendor/websockets/legacy/auth.py",
+      "sha256": "0dc41c09279578ff7725c1fcbc5584d072092fe5fe7f6dcb6740ec2696afd52a"
+    },
+    {
+      "path": "vendor/websockets/legacy/client.py",
+      "sha256": "7d5da66e253dadc8978497c010a5529b41b3b490d46c3a5143e2b910c6e4b90d"
+    },
+    {
+      "path": "vendor/websockets/legacy/exceptions.py",
+      "sha256": "562123a684f4f5fcf1fd9a9fd1a3460d5b510cd8d768ec3481d0ad6b72e48c57"
+    },
+    {
+      "path": "vendor/websockets/legacy/framing.py",
+      "sha256": "afd3f5c225efff55ee015430f1238f92e13d778799d2bfc9a30024cfdf96578c"
+    },
+    {
+      "path": "vendor/websockets/legacy/handshake.py",
+      "sha256": "d8dcebe40376c6f0c2e4474d3fe901de539cac069436562e8fffa1aff8efee93"
+    },
+    {
+      "path": "vendor/websockets/legacy/http.py",
+      "sha256": "70e0909835a120a4269bc5161973d6ec20d9834df08e8802b1bd0b3fda1eb4d4"
+    },
+    {
+      "path": "vendor/websockets/legacy/protocol.py",
+      "sha256": "6a3b555c36fe9449bd04dd0d17788469323f6f5ab97c108a4c1f70bd4a063b16"
+    },
+    {
+      "path": "vendor/websockets/legacy/server.py",
+      "sha256": "ee6c18fb20f4963345f77a0f62e993583ece2156c25ad6843b0d451490612003"
+    },
+    {
+      "path": "vendor/websockets/protocol.py",
+      "sha256": "bd3aa33c88361e63be6d2c6c733b849963313d3c4f5d4d61995523aa76a1578e"
+    },
+    {
+      "path": "vendor/websockets/proxy.py",
+      "sha256": "a05adb118b5ab185aff960dc9e239b0fd9c1479439aa41e9c8254b9e0c7b58c4"
+    },
+    {
+      "path": "vendor/websockets/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/websockets/server.py",
+      "sha256": "138496040f166519803a9b149bea02a9a701199adef5ed220e60c8adfa55db54"
+    },
+    {
+      "path": "vendor/websockets/streams.py",
+      "sha256": "a57aa06bbb6d8ee17a94285662258b49f525b77142690a445f569efe3bdc09e4"
+    },
+    {
+      "path": "vendor/websockets/sync/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/websockets/sync/client.py",
+      "sha256": "ff612bcadc357f77fd3bfbb68cbb52d68355e07b07522fe1de51af4fd6446834"
+    },
+    {
+      "path": "vendor/websockets/sync/connection.py",
+      "sha256": "d6925810c4472d620def9dfcbc9708785567bd25d5ac3d27d71adf5fbc033527"
+    },
+    {
+      "path": "vendor/websockets/sync/messages.py",
+      "sha256": "c99575ce1634ed90f4bd11796f5c836bbba0d2b6c0e540ce082090996c0071db"
+    },
+    {
+      "path": "vendor/websockets/sync/router.py",
+      "sha256": "06a29200a35962d45688ec6897da987b27e0c9746b30d27a16b4d364b35c5cc8"
+    },
+    {
+      "path": "vendor/websockets/sync/server.py",
+      "sha256": "b34ec734aff6b3590b37ad94a9cefbbaf343d33ec2d184d719e3ec0a206d5da1"
+    },
+    {
+      "path": "vendor/websockets/sync/utils.py",
+      "sha256": "4ed5be9dc605bc99a2496da03bcea7804d8156c9e705d2fee07f3c91634361b8"
+    },
+    {
+      "path": "vendor/websockets/typing.py",
+      "sha256": "03ac61e26eb9a51cca01bb8eb34905b8684be03588224a3ea694b8c2f2557344"
+    },
+    {
+      "path": "vendor/websockets/uri.py",
+      "sha256": "d9f14cc3e01b289e47547342bb0d51c7532790290d591a688315a184cdf4114e"
+    },
+    {
+      "path": "vendor/websockets/utils.py",
+      "sha256": "030852e149a56cabfb99e01a47b58d6d4a83e491684ad38fd5b032a3db1132eb"
+    },
+    {
+      "path": "vendor/websockets/version.py",
+      "sha256": "2216b3b56c72b1d63ea5dfb49ceb9b9e73ddbafc924af768070ad07492ad6768"
+    }
+  ],
+  "new_or_changed_files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "de2d7953e10ec478d6ce54f8ff70aa0aa4e53fc7fc7f9c1e5627e636b798bd0b"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "f2de56384b32afdcf19fa73e245a7fff3f05df18d6e04fc274d40d2725471e75"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "2e7ac9351530acbbe9c752db2b5b136666980a627700471f0a891c8ec704bcd9",
+      "source_sha256": "5ccb039b97d0ace6919bb0f0f30f00d28f03360a08e94b1869e5c28eb850c2d7"
+    },
+    {
+      "path": ".nvmrc",
+      "sha256": "68ca3fba3b7e864770cb61aeb306d4bd4354b68ab4dd38450860c5d823e42a53"
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "sha256": "c55035480ae08316d43abf2d864acb7c6cc970f68b4d5f79c50a1f373cf377fc"
+    },
+    {
+      "path": ".vscode/launch.json",
+      "sha256": "b6b65f5c304438c88528b7c2859bd46f161a59a0e147b79371c661a0636e6adc"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "sha256": "d365fdda50c9bc994c48631180b661b57a6d3fc5d6dceb7e0fc864d58e63c5e6"
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "sha256": "678dd79aea08dbb8e8c30bf3fe6dbcf7239a3510fd4636991620d6383647ddc6"
+    },
+    {
+      "path": "README.md",
+      "sha256": "fd3a7d5aca711947f16ee50220e3f70c672b3900d77672956ebd5a0e59bb5a97"
+    },
+    {
+      "path": "RIGHTS.md",
+      "sha256": "e33d4f7ac392a74c30bdc2c62726f2a285b6ab6c616fe3163210d140b7de0c0b"
+    },
+    {
+      "path": "Start_Veltrah_Demo.cmd",
+      "sha256": "6052ea901ab23e0b405d9f44010ca7332a504f7b16a5c067a952c1b6d881807d",
+      "source_sha256": "089e3af681fbc4459f7624cef1a65cb57d584be33fc5cf7afd0dd9f5eaf41a06"
+    },
+    {
+      "path": "Veltrah.code-workspace",
+      "sha256": "2192347b6d37b72b261c95cb4773c5d2a72d80230631877611e0482b3d7e0a27"
+    },
+    {
+      "path": "Veltrah_Demo_Offline.html",
+      "sha256": "eed50cd5d18374f041057a6cc77d075862fd3714a84d19157266be9abc6ee1b0"
+    },
+    {
+      "path": "backend/__init__.py",
+      "sha256": "6867344e9dff8e8431a5c4ad5a39e28333e84310cd55334f868b313e2c690642"
+    },
+    {
+      "path": "backend/fixture_service.py",
+      "sha256": "98d675bfb5b719af427931f2946fa5ee6a53b38339d6dc979c11d0bc407ba252",
+      "source_sha256": "4b502fb569516e05ea81d482b9644fee1422607ae76351ec44e77d9116599b26"
+    },
+    {
+      "path": "backend/tests/test_recovery_backend.py",
+      "sha256": "229e5ae46835b9c004df5e52d2588c5ae23c712b79a176460299c2a885bbb6aa",
+      "source_sha256": "3e12d0cef47a99e5d4ac3b7a0757f2278dd9a359878e37b7b8d209e0dc88ebd0"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "045ac7c9f0f8728d26ebc79c40c8d1104ea4757748512c712ad9699e3b5d05fa"
+    },
+    {
+      "path": "docs/CAMERA_VALIDATION.txt",
+      "sha256": "b03e07011eb57d4e9be32d203fefbb7ca9b1b85b8c3954e14ebb91508b8e56ef",
+      "source_sha256": "b97133df114ca05185f008555ca1940db958dbff4faafd4b568593ad338895e0"
+    },
+    {
+      "path": "docs/TECHNICAL_REVIEW.md",
+      "sha256": "521c14d1edf5ad3c5a34c9454a85f12361ffe9b164c1e01ac62b9257c6e129c3"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "sha256": "6dea334b2bcf9ba8b6b63ba82d4a1af70ceb5e16f10ae2e319b11c2c37d1f3b9"
+    },
+    {
+      "path": "docs/VSCODE.md",
+      "sha256": "25b6ab4d06b7e4449f8519559bdcdb7bf99d65c579d7374bd108c3b0d0456a33"
+    },
+    {
+      "path": "evidence/browser-results.json",
+      "sha256": "cab638d2d9fbe8a1f759511eaf3fe01857b2474b14c64c4bd40e57b25ccf0aa9",
+      "source_sha256": "e2526dbb203f6057b4912f934db32cf198107deaf77da836c84ae120037a428c"
+    },
+    {
+      "path": "evidence/checks.txt",
+      "sha256": "cdcf637b0e1ca2bb47bd491e2d99e0ce904cecfa085d844b9dc885d06a4adbed"
+    },
+    {
+      "path": "evidence/verification.json",
+      "sha256": "99bbb93906b28d244769a95f931b05a20c838fed36a4f5424bf73b181c9fd2ef"
+    },
+    {
+      "path": "evidence/vscode-checks.txt",
+      "sha256": "033b2eb79f20ea4cf5e851dc86760ad1f0278e4325b365897f6d400ff6104499"
+    },
+    {
+      "path": "evidence/vscode-verification.json",
+      "sha256": "12e5aa935323586e1e12e185114f5428a317ef0939099f38fbb6051dd044bc78"
+    },
+    {
+      "path": "frontend/README.md",
+      "sha256": "ba4cfa06e2940557e75bcc82c6b030541f2b95b714551f4105af863732634af1",
+      "source_sha256": "70eafbc7a5fd466aa3213b5a7e1b2a41383cbe5d4e6fc5f4582efc58bdb509d1"
+    },
+    {
+      "path": "qa/package-lock.json",
+      "sha256": "3e9bd4e15db9478b325d859a5e09a8d4f910f3c31fbe412a55c86debef92cbd6"
+    },
+    {
+      "path": "start.ps1",
+      "sha256": "601e209c1b0c81dfd802e1733e3ae660f4b2a3145d697067a8e9c71240e3b836",
+      "source_sha256": "7117a290c2aca843ace15b8cdcbd964ef383270573f91661c278d7c686e3d36b"
+    },
+    {
+      "path": "tools/check_repo.py",
+      "sha256": "c2d83ad4ab23d1d111e84c666f7980f0a64f048598dd897523b8ac8cc07497af"
+    },
+    {
+      "path": "tools/launch_demo.cmd",
+      "sha256": "d31eb414e1dece975ab85c6923601c37085a2a203b8d3f59d580a313b45c96b5"
+    },
+    {
+      "path": "tools/launch_demo.sh",
+      "sha256": "96eb81ce6dfc1faebc3428d12e22dbfeb9c925e7d7794bf44ccaf5c22bf17375"
+    },
+    {
+      "path": "tools/smoke_demo.py",
+      "sha256": "531fc93b7e028bd6510d5b0b62107ab3550e96b6bd5af635b3d387320051d20a"
+    }
+  ],
+  "manifest_note": "SHA256SUMS covers the exact packaged source file bytes, excluding itself. Git working-tree newline conversion on another OS may change checksums.",
+  "vscode_update": {
+    "date": "2026-11-04",
+    "changes": [
+      "VS Code workspace, default extension-free run task, optional debugpy launch and extension recommendations",
+      "Python version detection and fallback launchers for Windows and macOS/Linux",
+      "Flattened ZIP project root so Open Folder finds .vscode",
+      "Fresh-copy task startup checked with spaces in path and no Node/npm on PATH"
+    ],
+    "scope": "VS Code GUI and Windows/macOS native execution remain unverified; Linux launch/configuration checks passed."
+  }
+}

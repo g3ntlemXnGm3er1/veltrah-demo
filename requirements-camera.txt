@@ -1,0 +1,7 @@
+# OPTIONAL experimental camera path only; not used by run_demo.py.
+# Version references retrieved from official PyPI metadata on 2026-11-04.
+# Suggested separate environment: Python 3.12. Physical hardware unverified.
+# Select only the contrib OpenCV package; do not also install opencv-python.
+mediapipe==1.2.2
+opencv-contrib-python==5.0.0.93
+numpy==2.5.4

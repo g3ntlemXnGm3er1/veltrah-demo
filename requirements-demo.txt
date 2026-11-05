@@ -1,0 +1,3 @@
+# The downloadable packet vendors websockets 16.0 (pure Python) with its license.
+# Installation is an alternative only; the default packaged launcher installs nothing.
+websockets==16.0
