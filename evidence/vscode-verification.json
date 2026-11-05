@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-11-04T23:18:56.427209+00:00",
+  "checks": [
+    "All workspace/settings/task/launch JSON parses",
+    "Workspace resolves project root with .vscode",
+    "No autorun or dependency-install prerequisite",
+    "Fresh extraction has no node_modules",
+    "Default Linux task boots from a path containing spaces",
+    "Default task starts with only sh, dirname and Python on PATH; no Node/npm available",
+    "Browser-open request uses printed localhost URL (QA browser stub)",
+    "HTTP page and health respond",
+    "Real WebSocket selection gets local-only acknowledgement",
+    "VS Code smoke task passes through shared resolver",
+    "python-only fallback works from another working directory"
+  ],
+  "environment": {
+    "os": "linux",
+    "python": "3.12.14"
+  },
+  "limits": [
+    "VS Code editor GUI is not installed; task command/configuration checked outside the GUI.",
+    "Windows/macOS native execution not performed.",
+    "Existing 58 unit tests/build/smoke passed after integration changes; no application UI behavior change."
+  ],
+  "packaging": "Repository files are at ZIP root so Open Folder loads .vscode directly; Veltrah.code-workspace uses a relative dot folder."
+}
